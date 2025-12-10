@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplicación de Matrices - Calculadora ESIS</title>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../js/notificaciones.js"></script>
+
+<link rel="stylesheet" href="../../css/estilos.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+<link rel="stylesheet" href="multiplicacion.css">
+</head>
+<body>
+
+<header class="encabezado-principal">
+  <div class="barra-superior">
+    <div class="contenedor-logo">
+      <img src="../../imagenes/logo-esis.png" alt="Logo ESIS" class="logo">
+      <div class="info-universidad">
+        <h1>UNIVERSIDAD NACIONAL JORGE BASADRE GROHMANN</h1>
+        <h2>Escuela Profesional de Ingeniería en Sistemas e Informática</h2>
+      </div>
+    </div>
+    <div class="contenedor-titulo">
+      <h2 class="titulo-proyecto">MULTIPLICACIÓN DE MATRICES</h2>
+    </div>
+  </div>
+
+  <nav class="menu-navegacion" id="menuNavegacion">
+    <ul>
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../../menu.html">Calculadoras</a></li>
+      <li><a href="../../index.html#sobre">Sobre el Proyecto</a></li>
+      <li><a href="../../index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <button class="boton-menu" id="botonMenu" aria-label="Abrir menú">☰</button>
+</header>
+
+<div class="aplicacion">
+  <aside class="panel" aria-label="Controles">
+    <div class="seccion-panel">
+      <div class="titulo-seccion">Dimensiones</div>
+      
+      <div class="grupo-dimension">
+        <label class="etiqueta-pequena">Filas A (m):</label>
+        <input type="number" id="filasA" value="2" min="2" max="5" class="input-dimension">
+      </div>
+
+      <div class="grupo-dimension">
+        <label class="etiqueta-pequena">Columnas A = Filas B (n):</label>
+        <input type="number" id="columnasA" value="2" min="2" max="5" class="input-dimension">
+      </div>
+
+      <div class="grupo-dimension">
+        <label class="etiqueta-pequena">Columnas B (p):</label>
+        <input type="number" id="columnasB" value="2" min="2" max="5" class="input-dimension">
+      </div>
+
+      <div class="alerta-info">
+        <strong>Resultado:</strong> Matriz (m × p)
+      </div>
+    </div>
+
+    <div class="seccion-panel">
+      <div class="titulo-seccion">Matriz A (m × n)</div>
+      <div id="inputsMatrizA" class="contenedor-matriz-grid"></div>
+    </div>
+
+    <div class="seccion-panel">
+      <div class="titulo-seccion">Matriz B (n × p)</div>
+      <div id="inputsMatrizB" class="contenedor-matriz-grid"></div>
+    </div>
+
+    <div class="seccion-panel">
+      <div class="titulo-seccion">Acciones</div>
+      <div class="controles" style="gap: 8px;">
+        <button class="boton-esis primario" id="btnCalcular">Calcular</button>
+        <button class="boton-esis secundario" id="btnEjemplo">Ejemplo</button>
+        <button class="boton-esis secundario" id="btnLimpiar">Limpiar</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="principal">
+    <section id="tarjetaResultado" class="tarjeta-esis oculto">
+      <div class="encabezado-tarjeta">
+        <div>
+          <div class="titulo-tarjeta">Resultado: C = A × B</div>
+          <div class="texto-pequeno-gris">Producto matricial con producto punto de filas y columnas</div>
+        </div>
+        <div class="acciones-inferior">
+          <button id="btnTogglePasos" class="boton-toggle">Ver desarrollo</button>
+        </div>
+      </div>
+      <div id="contenedorResultado"></div>
+    </section>
+
+    <section id="seccionDesarrollo" class="tarjeta-esis oculto" aria-hidden="true">
+      <div class="encabezado-tarjeta">
+        <div class="titulo-tarjeta">Desarrollo Completo</div>
+        <div class="texto-pequeno-gris">Cálculo de cada elemento mediante producto punto</div>
+      </div>
+      <div id="contenedorDesarrollo"></div>
+    </section>
+  </main>
+</div>
+
+<footer class="pie-pagina">
+  <div class="contenedor-pie">
+    <div class="info-izquierda">
+      <p class="item-footer">
+        <strong>Curso:</strong> Modelado Computacional para Ingeniería
+      </p>
+      <p class="item-footer">
+        <strong>Docente:</strong> MSc. Ing. Jorge R. Chambilla Araca
+      </p>
+    </div>
+    <div class="info-derecha">
+      <p class="item-footer">
+        <strong>Desarrollado por:</strong> Helber Junior Lope | Elvis Ronald Arocutipa | Oscar Fabián Choque
+      </p>
+    </div>
+  </div>
+  <div class="creditos">
+    <p>&copy; ESIS 2025 Universidad Nacional Jorge Basadre Grohmann - Tacna</p>
+  </div>
+</footer>
+
+<script src="../../js/menu.js"></script>
+<script src="multiplicacion.js"></script>
+
+</body>
+</html>

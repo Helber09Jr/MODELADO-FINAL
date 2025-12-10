@@ -1,0 +1,86 @@
+.contenedor-tabla-editable {
+  padding: 12px;
+  background: rgba(0, 40, 85, 0.08);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 40, 85, 0.2);
+  margin: 10px 0;
+}
+
+.tabla-editable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.tabla-editable input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgba(0, 40, 85, 0.2);
+  text-align: center;
+  font-size: 13px;
+}
+
+.tabla-editable input:focus {
+  border-color: #ffb703;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 183, 3, 0.3);
+}
+
+.tabla-editable td {
+  padding: 6px;
+  border: 1px solid rgba(0, 40, 85, 0.15);
+}
+
+.tabla-editable td:last-child {
+  border-left: 3px solid #ffb703;
+}
+
+.tabla-desarrollo {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.tabla-desarrollo th {
+  background: linear-gradient(90deg, #002855 0%, #004080 100%);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.tabla-desarrollo td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 40, 85, 0.1);
+  font-size: 12px;
+}
+
+.tabla-desarrollo tr:hover {
+  background: rgba(255, 183, 3, 0.08);
+}
+
+.solucion-vector {
+  padding: 15px;
+  background: rgba(16, 185, 129, 0.15);
+  border-left: 4px solid #10b981;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.solucion-vector p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .tabla-desarrollo th,
+  .tabla-desarrollo td {
+    padding: 8px;
+    font-size: 11px;
+  }
+}

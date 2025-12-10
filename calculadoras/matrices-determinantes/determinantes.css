@@ -1,0 +1,200 @@
+/* --- SUMA DE MATRICES - ESTILOS MEJORADOS --- */
+
+.contenedor-matriz-grid {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(0, 40, 85, 0.08);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 40, 85, 0.2);
+}
+
+.input-matriz {
+  padding: 10px;
+  border: 1.5px solid rgba(0, 40, 85, 0.3);
+  border-radius: 4px;
+  font-size: 13px;
+  text-align: center;
+  background: white;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.input-matriz:hover {
+  border-color: rgba(0, 40, 85, 0.5);
+  background: rgba(0, 40, 85, 0.02);
+}
+
+.input-matriz:focus {
+  border-color: #ffb703;
+  box-shadow: 0 0 12px rgba(255, 183, 3, 0.3);
+  outline: none;
+}
+
+/* Contenedor de matrices resultado */
+.contenedor-matrices-resultado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.matriz-contenedor {
+  text-align: center;
+}
+
+.matriz-contenedor h4 {
+  color: #002855;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tabla-matriz-resultado {
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.tabla-matriz-resultado td {
+  padding: 12px 18px;
+  border: 1px solid rgba(0, 40, 85, 0.15);
+  text-align: center;
+  font-weight: 500;
+  color: #002855;
+  min-width: 60px;
+  background: white;
+}
+
+.tabla-matriz-resultado tr:nth-child(even) {
+  background: rgba(0, 40, 85, 0.03);
+}
+
+.tabla-matriz-resultado tr:hover {
+  background: rgba(255, 183, 3, 0.08);
+}
+
+.operador {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffb703;
+}
+
+/* Tabla de desarrollo */
+.tabla-desarrollo {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.tabla-desarrollo thead {
+  background: linear-gradient(90deg, #002855 0%, #004080 100%);
+}
+
+.tabla-desarrollo th {
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.tabla-desarrollo td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0, 40, 85, 0.1);
+  font-size: 13px;
+  color: #333;
+}
+
+.tabla-desarrollo tr:hover {
+  background: rgba(255, 183, 3, 0.08);
+}
+
+.resultado-paso {
+  font-weight: 600;
+  color: #002855;
+  background: rgba(255, 183, 3, 0.15);
+}
+
+.desarrollo-completo {
+  padding: 20px;
+  background: rgba(0, 40, 85, 0.03);
+  border-left: 4px solid #ffb703;
+  border-radius: 4px;
+}
+
+.desarrollo-completo p {
+  margin: 12px 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.desarrollo-completo strong {
+  color: #002855;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-matrices-resultado {
+    gap: 12px;
+  }
+
+  .tabla-matriz-resultado td {
+    padding: 8px 10px;
+    min-width: 50px;
+    font-size: 12px;
+  }
+
+  .tabla-desarrollo th,
+  .tabla-desarrollo td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .operador {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-matriz-grid {
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .input-matriz {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .tabla-matriz-resultado td {
+    padding: 6px 8px;
+    min-width: 40px;
+    font-size: 11px;
+  }
+
+  .tabla-desarrollo {
+    font-size: 11px;
+  }
+
+  .tabla-desarrollo th {
+    padding: 8px;
+  }
+
+  .tabla-desarrollo td {
+    padding: 6px;
+  }
+
+  .operador {
+    font-size: 16px;
+  }
+}

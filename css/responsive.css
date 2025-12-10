@@ -1,0 +1,148 @@
+/* --- ESTILOS RESPONSIVE --- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .barra-superior {
+    padding: 12px 30px;
+    gap: 20px;
+  }
+
+  .menu-navegacion ul {
+    padding: 12px 30px;
+    gap: 25px;
+  }
+
+  .titulo-proyecto {
+    font-size: 16px;
+  }
+
+  .info-universidad h1 {
+    font-size: 14px;
+  }
+
+  .info-universidad h2 {
+    font-size: 11px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .boton-menu {
+    display: block;
+  }
+
+  .barra-superior {
+    padding: 10px 20px;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255, 183, 3, 0.15);
+  }
+
+  .menu-navegacion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: linear-gradient(180deg, rgba(0, 40, 85, 0.95) 0%, rgba(0, 64, 128, 0.95) 100%);
+  }
+
+  .menu-navegacion.menu-activo {
+    max-height: 500px;
+  }
+
+  .menu-navegacion ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 20px;
+    gap: 0;
+  }
+
+  .menu-navegacion li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .menu-navegacion li:last-child {
+    border-bottom: none;
+  }
+
+  .menu-navegacion a {
+    padding: 12px 15px;
+    text-align: left;
+  }
+
+  .logo {
+    width: 45px;
+  }
+
+  .contenedor-logo {
+    flex-direction: row;
+  }
+
+  .titulo-proyecto {
+    font-size: 13px;
+    letter-spacing: 0.8px;
+  }
+
+  .info-universidad h1 {
+    font-size: 12px;
+  }
+
+  .info-universidad h2 {
+    font-size: 10px;
+  }
+
+  .contenedor-pie {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-izquierda,
+  .info-derecha {
+    min-width: auto;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .barra-superior {
+    padding: 8px 15px;
+    gap: 10px;
+  }
+
+  .boton-menu {
+    right: 15px;
+    top: 8px;
+  }
+
+  .menu-navegacion ul {
+    padding: 6px 15px;
+  }
+
+  .titulo-proyecto {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  .info-universidad h1 {
+    font-size: 11px;
+  }
+
+  .info-universidad h2 {
+    font-size: 9px;
+  }
+
+  .menu-navegacion a {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .item-footer {
+    font-size: 0.85em;
+  }
+
+  .creditos {
+    font-size: 0.8em;
+  }
+}

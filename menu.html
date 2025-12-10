@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Calculadoras Numéricas - ESIS</title>
+  <!-- Google Fonts Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos-menu-premium.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<header class="encabezado-principal">
+  <div class="barra-superior">
+    <div class="contenedor-logo">
+      <img src="imagenes/logo-esis.png" alt="Logo ESIS" class="logo">
+      <div class="info-universidad">
+        <h1>UNIVERSIDAD NACIONAL JORGE BASADRE GROHMANN</h1>
+        <h2>Escuela Profesional de Ingeniería en Sistemas e Informática</h2>
+      </div>
+    </div>
+    <div class="contenedor-titulo">
+      <h2 class="titulo-proyecto">CALCULADORAS NUMÉRICAS</h2>
+    </div>
+  </div>
+
+  <nav class="menu-navegacion" id="menuNavegacion">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html" class="enlace-activo">Calculadoras</a></li>
+      <li><a href="index.html#sobre">Sobre el Proyecto</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <button class="boton-menu" id="botonMenu" aria-label="Abrir menú">≡</button>
+</header>
+
+<main class="contenedor-menu-principal">
+  <!-- Sección Premium de Presentación -->
+  <section class="seccion-presentacion">
+    <div class="contenedor-presentacion">
+      <h1 class="titulo-presentacion">Catálogo de Calculadoras</h1>
+      <p class="subtitulo-presentacion">Explora nuestras 22 calculadoras interactivas organizadas por unidades académicas</p>
+    </div>
+  </section>
+
+  <!-- Sección de Búsqueda y Tabs -->
+  <section class="seccion-busqueda-tabs">
+    <div class="contenedor-busqueda-tabs">
+      <!-- Barra de Búsqueda -->
+      <div class="barra-busqueda-container">
+        <svg class="icono-busqueda" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input
+          type="search"
+          id="inputBusqueda"
+          class="barra-busqueda"
+          placeholder="Buscar calculadora..."
+          aria-label="Buscar calculadora"
+        >
+      </div>
+
+      <!-- Tabs/Pestañas -->
+      <div class="tabs-container">
+        <button class="tab-btn tab-activo" data-tab="todas" data-unidad="">
+          Todas <span class="tab-badge">22</span>
+        </button>
+        <button class="tab-btn" data-tab="unidad1" data-unidad="unidad1">
+          Unidad I <span class="tab-badge">13</span>
+        </button>
+        <button class="tab-btn" data-tab="unidad2" data-unidad="unidad2">
+          Unidad II <span class="tab-badge">9</span>
+        </button>
+
+        <!-- Dropdown Categorías -->
+        <div class="dropdown-categorias">
+          <button class="tab-btn dropdown-toggle" id="btnCategorias">
+            Categorías ▼
+          </button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <button class="dropdown-item" data-filtro="matricial">Matriciales (4)</button>
+            <button class="dropdown-item" data-filtro="lineales">Lineales (4)</button>
+            <button class="dropdown-item" data-filtro="no-lineales">No Lineales (5)</button>
+            <button class="dropdown-item" data-filtro="interpolacion">Interpolación (3)</button>
+            <button class="dropdown-item" data-filtro="integracion">Integración (2)</button>
+            <button class="dropdown-item" data-filtro="edo">EDO (4)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="contenedorCalculadoras" class="menu-dinamico">
+    <div class="cargando">
+      <div class="spinner"></div>
+      <p>Cargando calculadoras...</p>
+    </div>
+  </div>
+</main>
+
+<footer class="pie-pagina">
+  <div class="contenedor-pie">
+    <div class="info-izquierda">
+      <p class="item-footer">🎓 <strong>Curso:</strong> Modelado Computacional para Ingeniería</p>
+      <p class="item-footer"><strong>Docente:</strong> MSc. Ing. Jorge R. Chambilla Araca</p>
+    </div>
+    <div class="info-derecha">
+      <p class="item-footer"><strong>Desarrollado por:</strong> Helber Junior Lope | Elvis Ronald Arocutipa | Oscar Fabián Choque</p>
+    </div>
+  </div>
+  <div class="creditos">
+    <p>&copy; ESIS 2025 Universidad Nacional Jorge Basadre Grohmann - Tacna</p>
+  </div>
+</footer>
+
+<script src="menu.js"></script>
+
+</body>
+</html>
